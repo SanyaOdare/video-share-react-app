@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Box } from "@mui/material"; // '@mui/material';
 
-import Videos from "./Videos";
-import ChannelCard from "./ChannelCard";
+import { Videos, ChannelCard } from "./elements";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 const ChannelDetail = () => {
@@ -36,9 +35,8 @@ const ChannelDetail = () => {
           <ChannelCard channelDetail={channelDetail} marginTop="-110px" />
       </Box>
       <Box display="flex" p="2">
-        <Box sx={{ mr: { sm: "100px" }}}>
-          <Videos videos={videos} />
-        </Box>
+        <Box sx={{ mr: { sm: "100px" }}} />
+        <Videos videos={videos} />
       </Box>
     </Box>
   )
